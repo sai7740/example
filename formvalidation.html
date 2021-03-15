@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <style media="screen">
+      table{
+        width:650px;
+        margin:auto;
+        padding:15px;
+        box-shadow:0px 0px 2px;
+      }
+      tr{
+        height:50px;
+      }
+      th{text-align:right; color:blue;}
+      th:after{
+        content:" * ";
+        color:red;
+      }
+      .inputbox{
+        height:28px;
+        width:100%;
+      }
+
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="save.py" method="POST" id="myform">
+      <table>
+      <caption><h2>Form validation in javascript</h2>
+        <p id="message" align="center"></p>
+      </caption>
+      <tr>
+        <th>Full Name</th>
+        <td><input type="text" class="inputbox" id="fname"/>
+        <i id="nameerror"></i>
+        </td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td><input type="text" class="inputbox" id="age"/><i id="ageerror"></i></td>
+      </tr>
+      <tr>
+        <th>Education</th>
+        <td><select class="inputbox" id="edu">
+          <option value="">--choose--</option>
+          <option value="MCA">MCA</option>
+          <option value="BCA">BCA</option>
+          <option value="B.TECH">B.TECH</option>
+        </select>
+        <i id="eduerror"></i>
+      </td>
+      </tr>
+      <tr>
+        <th>Marks</th>
+        <td><input type="number" class="inputbox" id="mark"/><i id="markerror"></i></td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td><input type="radio" name="a" id="male"/>Male
+          <input type="radio"name="a"id="female">Female
+          <p id="gendererror"></p>
+        </td>
+      </tr>
+      <tr>
+        <th>Mobile</th>
+        <td><input type="number" class="inputbox" id="mobile"/>
+          <i id="mobileerror"></i>
+        </td>
+      </tr>
+
+      <tr>
+        <th>E-Mail</th>
+        <td><input type="email" class="inputbox" id="mail"/>
+          <i id="mailerror"></i>
+        </td>
+      </tr>
+      <tr>
+        <th>Password</th>
+        <td><input type="password" class="inputbox" id="pass" maxlength="8"/>
+          <i id="passerror"></i>
+          <p>Password beteen 6-16 char combination of ,0-9 and !@#$%^&*</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td>
+        <textarea class="inputbox" id="address"></textarea>
+        <i id="addresserror"></i>
+        </td>
+      </tr>
+      <tr>
+        <th>Upload File</th>
+        <td><input type="file" class="inputbox" id="pic"/>
+          <i id="fileerror"></i>
+          <p>upload only .jpg,png,jpeg photo</p>
+
+        </td>
+
+      </tr>
+
+
+      <tr>
+        <td colspan="2" align="center">
+          <button type="button" onclick="register()">Submit</button>
+          <button type="reset">Clear</button>
+        </td>
+      </tr>
+
+
+    </table>
+      </form>
+      <script src="validation.js">
+
+
+      </script>
+
+  </body>
+</html>
